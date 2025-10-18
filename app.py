@@ -1,10 +1,6 @@
 from flask import Flask, jsonify #importing the neccessory libaries
 from datetime import datetime
 import requests
-import logging
-import os
-
-logging.basicConfig(filename='app.log', level=logging.DEBUG,format='%(asctime)s %(levelname)s %(name)s : %(message)s') #Configuration for the basic logging
 
 app = Flask(__name__)
 
