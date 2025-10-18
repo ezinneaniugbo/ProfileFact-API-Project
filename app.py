@@ -1,8 +1,8 @@
 from flask import Flask, jsonify #importing the neccessory libaries
 from datetime import datetime
-from flask_cors import CORS
 import requests
 import logging
+import os
 
 logging.basicConfig(filename='app.log', level=logging.DEBUG,format='%(asctime)s %(levelname)s %(name)s : %(message)s') #Configuration for the basic logging
 
@@ -36,4 +36,5 @@ def get_profile():
     return jsonify(profile), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
