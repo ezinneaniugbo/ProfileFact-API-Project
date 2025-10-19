@@ -1,6 +1,7 @@
 from flask import Flask, jsonify #importing the neccessory libaries
 from datetime import datetime
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -32,4 +33,5 @@ def get_profile():
     return jsonify(profile), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
