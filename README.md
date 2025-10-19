@@ -15,32 +15,32 @@
 
 ## How to Run Locally
 
-Clone this repository
+-Clone this repository
 
 git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
 
 
-Create a virtual environment (recommended)
+-Create a virtual environment (recommended)
 
 python3 -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 
 
-Install dependencies
+-Install dependencies
 
 pip install -r requirements.txt
 
 
-Run the Flask app
+-Run the Flask app
 
 python app.py
 
 
-or if your file is named something else (like profile_endpoint.py):
+-or if your file is named something else (like profile_endpoint.py):
 
 python profile_endpoint.py
 
 
-Access the app
-Open your browser and go to 👉🏽 http://127.0.0.1:5000/me
+-Access the app
+-Open your browser and go to 👉🏽 http://127.0.0.1:5000/me
